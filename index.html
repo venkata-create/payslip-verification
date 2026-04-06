@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payslip Verification</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding: 40px;
+      background: #f4f6f9;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    h2 { color: #1f4e79; }
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>Payslip Verification ✅</h2>
+
+  <p><b>Employee:</b> <span id="name"></span></p>
+  <p><b>Net Pay:</b> <span id="amount"></span></p>
+  <p><b>Month:</b> <span id="month"></span></p>
+
+  <br>
+  <p>For queries: <b>bgv@frugaltesting.com</b></p>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  document.getElementById("name").innerText = params.get("name");
+  document.getElementById("amount").innerText = params.get("amount");
+  document.getElementById("month").innerText = params.get("month");
+</script>
+
+</body>
+</html>
